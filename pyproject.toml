@@ -1,0 +1,44 @@
+[project]
+name = "tool-paperbanana"
+version = "0.3.0"
+description = "PaperBanana multi-agent academic illustration generation tool"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai>=0.3.0",
+    "matplotlib>=3.7.0",
+    "tikzplotlib>=0.10.0",
+    "scienceplots>=2.1.0",
+    "seaborn>=0.12.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "colorcet>=3.0.0",
+    "pillow>=10.0.0",
+]
+
+[project.entry-points."amplifier.modules"]
+tool-paperbanana = "tool_paperbanana:mount"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pyright>=1.1.0",
+    "ruff>=0.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tool_paperbanana"]
+
+[tool.pyright]
+typeCheckingMode = "standard"
+pythonVersion = "3.10"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
