@@ -1,3 +1,11 @@
+# amplifier-module-tool-paperbanana — DEPRECATED
+
+> **This standalone module has been re-inlined into [amplifier-bundle-research](https://github.com/michaeljabbour/amplifier-bundle-research) (`modules/tool-paperbanana`) and is no longer maintained here.**
+
+It was briefly extracted so two bundles could share it. After amplifier-bundle-scientificpaper was merged into amplifier-bundle-research, research is the sole consumer, so the module now lives inside that repo as a single source of truth. This repository is archived (read-only).
+
+---
+
 # PaperBanana Tool - AI-Generated Academic Figures
 
 Publication-ready academic illustrations using Google's Imagen 4 image generation model.
